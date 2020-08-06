@@ -1,0 +1,54 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <pluginGroups> </pluginGroups>
+    <proxies>
+        <proxy>
+            <id>optional</id>
+            <active>true</active>
+            <protocol>http</protocol>
+            <username>proxyuser</username>
+            <password>proxypass</password>
+            <host>10.129.255.41</host>
+            <port>80</port>
+            <nonProxyHosts>artifactory.platform.manulife.io</nonProxyHosts>
+        </proxy>
+    </proxies>
+    <servers> </servers>
+    <mirrors> </mirrors>
+    <profiles>
+        <profile>
+            <id>manulife-artifactory</id>
+            <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>libs-release</name>
+                    <url>https://artifactory.platform.manulife.io/artifactory/libs-release</url>
+                </repository>
+                <repository>
+                    <snapshots />
+                    <id>snapshots</id>
+                    <name>libs-snapshot</name>
+                    <url>https://artifactory.platform.manulife.io/artifactory/libs-snapshot</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>plugins-release</name>
+                    <url>https://artifactory.platform.manulife.io/artifactory/plugins-release</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <snapshots />
+                    <id>snapshots</id>
+                    <name>plugins-snapshot</name>
+                    <url>https://artifactory.platform.manulife.io/artifactory/plugins-snapshot</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+</settings>

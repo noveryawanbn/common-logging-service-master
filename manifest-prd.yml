@@ -1,0 +1,18 @@
+---
+applications:
+- name: common-logging-service
+  memory: 2G
+  instances: 1
+  routes:
+    - route: common-logging-service-prd.apps.sea.preview.pcf.manulife.com
+  path: target/common-logging-service-1.0.0-SNAPSHOT.jar
+  buildpack: java_buildpack_offline
+  #stack: cflinuxfs3
+  services:
+    - registry-service
+    - config-service
+    - cb-dashboard-service
+    - newrelic-service
+  env:
+    spring.profiles.active: prd
+    NEW_RELIC_APP_NAME: common-logging-service-prd

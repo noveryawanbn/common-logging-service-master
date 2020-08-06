@@ -1,0 +1,23 @@
+---
+instance_limits:
+  min: 2
+  max: 4
+rules:
+- rule_type: "http_throughput"
+  threshold:
+    min: 10
+    max: 30
+- rule_type: "memory"
+  threshold:
+    min: 20
+    max: 80
+- rule_type: "http_latency"
+  rule_sub_type: "avg_99th"
+  threshold:
+    min: 15000
+    max: 30000
+- rule_type: "cpu"
+  threshold:
+    min: 50
+    max: 80
+scheduled_limit_changes: []
