@@ -48,7 +48,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<swagger-codegen-maven-plugin.version>2.3.1</swagger-codegen-maven-plugin.version>
 		<swagger-annotations.version>2.0.5</swagger-annotations.version>
-		<springfox.version>2.9.2</springfox.version>
+		<springfox.version>2.10.0</springfox.version>
 		<jackson.version>2.8.9</jackson.version>
 		<sonarqube.version>3.4.0.905</sonarqube.version>
 	</properties>
@@ -58,7 +58,7 @@
 		<groupId>com.manulife.ap</groupId>
 		<artifactId>rsf-parent</artifactId>
 		<version>0.0.3</version>
-		<relativePath />
+		<relativePath/>
 	</parent>	
 
 	<!-- Dependency management for springframework and pivotal.io -->
@@ -86,7 +86,7 @@
 			<url>https://artifactory.platform.manulife.io/artifactory/libs-release/</url>
 		</repository>
 		<repository>
-			<snapshots />
+			<snapshots/>
 			<id>snapshots</id>
 			<name>libs-snapshot-local</name>
 			<url>https://artifactory.platform.manulife.io/artifactory/libs-snapshot/</url>
@@ -107,7 +107,7 @@
 			<id>snapshots</id>
 			<name>plugins-snapshot</name>
 			<url>https://artifactory.platform.manulife.io/artifactory/plugins-snapshot/</url>
-			<snapshots />
+			<snapshots/>
 		</pluginRepository>
 	</pluginRepositories>
 	
@@ -308,7 +308,7 @@
 					</execution>
 					<execution>
 						<id>swagger-mustache-update</id>
-						<configuration></configuration>
+						<configuration/>
 					</execution>
 				</executions>
 			</plugin>
@@ -509,7 +509,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore/>
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
